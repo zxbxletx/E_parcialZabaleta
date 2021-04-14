@@ -27,7 +27,7 @@ public class Controller extends HttpServlet {
             objDatos.setId(registro.obtieneId());
             
             request.setAttribute("op", op);
-            request.setAttribute("miTarea", objDatos);
+            request.setAttribute("miDatos", objDatos);
             request.getRequestDispatcher("editar.jsp").forward(request, response);
         }
         if(op.equals("modificar")){
@@ -38,7 +38,7 @@ public class Controller extends HttpServlet {
             objDatos = registro.getLista().get(pos);
             
             request.setAttribute("op", op);
-            request.setAttribute("miTarea", objDatos);
+            request.setAttribute("miDatos", objDatos);
             request.getRequestDispatcher("editar.jsp").forward(request, response);
         }
         if(op.equals("eliminar")){
